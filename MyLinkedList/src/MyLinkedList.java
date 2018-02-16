@@ -1,22 +1,22 @@
 public class MyLinkedList {
-    ListNode head;
-    ListNode tail;
+    Node head;
+    Node tail;
     int length;
-    class ListNode{
-        public ListNode(int val){
+    class Node{
+        public Node(int val){
             this.val=val;
         }
         int val;
-        ListNode next;
+        Node next;
     }
 
     public MyLinkedList(){
-        head=new ListNode(0);
+        head=new Node(0);
         tail=head;
         length=0;
     }
     public void add(int val){
-        tail.next=new ListNode(val);
+        tail.next=new Node(val);
         tail=tail.next;
         length++;
     }
@@ -30,7 +30,7 @@ public class MyLinkedList {
 
     }
     public void print() {
-        ListNode runner = head;
+        Node runner = head;
         while (runner != null) {
             System.out.print(runner.val);
             runner = runner.next;
